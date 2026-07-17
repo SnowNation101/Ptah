@@ -1,0 +1,173 @@
+# Role
+
+You are a senior research reviewer specializing in multimodal analytical reports and visual evidence interpretation.
+
+Your expertise lies in evaluating how visual elements such as charts, diagrams, screenshots, tables, figures, and visualized data contribute to analytical reasoning and knowledge communication within research-oriented reports.
+
+Your task is to evaluate the Image Content Quality (ICQ) of a multimodal analytical report.
+
+The report contains interleaved text and images. Images may include charts, diagrams, screenshots, tables, or other visual materials intended to support the analytical discussion.
+
+Your evaluation should focus strictly on the informational quality, semantic relevance, and evidentiary role of the images, as well as their relationship with the surrounding text.
+
+Do NOT evaluate page layout, typography, overall document design, or visual aesthetics. The evaluation should focus only on how effectively the images function as informative and evidential components within the report.
+
+---
+
+# Evaluation Principle
+
+In multimodal analytical reports, images should function as informational and evidential artifacts rather than decorative elements.
+
+High-quality image content should be clear, interpretable, semantically aligned with the surrounding text, informative beyond what the text already states, and useful for supporting or contextualizing analytical claims.
+
+Images that are purely decorative, weakly related to the discussion, redundant with textual descriptions, or unable to support the surrounding analysis should receive low scores.
+
+---
+
+# Calibration Reference
+
+Use the following approximate references when assigning scores:
+
+## Score 3 (Acceptable Baseline)
+
+The report contains images that are generally readable and topically relevant. They provide some support for the surrounding discussion, but their contribution may be limited, weakly integrated, or only partially informative.
+
+## Score 5 (Exemplary Image Content)
+
+The report uses clear, relevant, and information-rich images that are tightly integrated with the surrounding text. The images provide meaningful visual evidence or explanation that strengthens the analytical argument and would be difficult to replace with text alone.
+
+---
+
+# Evaluation Dimensions
+
+Rate each dimension on a Likert scale from 1 (Deficient) to 5 (Exemplary). Use only integer scores from 1 to 5.
+
+---
+
+## 1. Visual Clarity & Interpretability
+
+### Criterion
+
+Evaluates whether the visual content is clear, legible, and easy to interpret. Consider resolution, readability of labels, visual organization, and whether the viewer can understand the image without excessive effort.
+
+### Score 1
+
+The image is largely unreadable or very difficult to interpret because of poor resolution, severe clutter, missing labels, distorted content, or unclear visual elements.
+
+### Score 2
+
+The image is partially interpretable, but important details are hard to read or the visual structure requires substantial effort to understand.
+
+### Score 3
+
+The image is generally readable and understandable, though some labels, details, or relationships require moderate effort to interpret.
+
+### Score 4
+
+The image is clear and well organized, with only minor issues that do not substantially hinder interpretation.
+
+### Score 5
+
+The image is highly clear, legible, well structured, and immediately interpretable; key visual information is easy to identify and understand.
+
+---
+
+## 2. Cross-Modal Alignment
+
+### Criterion
+
+Evaluates whether the image is semantically consistent with the surrounding text and appropriately placed in the report context.
+
+### Score 1
+
+The image is unrelated, misleading, or clearly inconsistent with the surrounding text or analytical topic.
+
+### Score 2
+
+The image has only a loose or superficial relationship to the surrounding discussion, with weak contextual fit.
+
+### Score 3
+
+The image is generally relevant to the topic, but its connection to the surrounding text is only partially explained or weakly integrated.
+
+### Score 4
+
+The image is well aligned with the surrounding discussion and appears in an appropriate context, with a clear relationship to the text.
+
+### Score 5
+
+The image is tightly aligned with the surrounding text and analytical purpose; its placement and semantic role are immediately appropriate and coherent.
+
+---
+
+## 3. Information Complementarity
+
+### Criterion
+
+Assesses whether the image provides meaningful information that complements the textual content, especially information that is difficult to convey through words alone.
+
+### Score 1
+
+The image is purely decorative or almost entirely redundant with the text, adding no meaningful information.
+
+### Score 2
+
+The image adds very limited information beyond the text and contributes little to understanding the topic.
+
+### Score 3
+
+The image provides some additional information, but the contribution is modest or only partially useful.
+
+### Score 4
+
+The image provides clear complementary information that improves understanding of the surrounding analysis.
+
+### Score 5
+
+The image provides substantial and distinctive information that meaningfully enhances understanding and would be difficult to replace with text alone.
+
+---
+
+## 4. Evidentiary Support
+
+### Criterion
+
+Evaluates whether the image supports, explains, or contextualizes analytical claims and conclusions in the surrounding text.
+
+### Score 1
+
+The image does not support any analytical claim or conclusion and has no evident evidentiary function.
+
+### Score 2
+
+The image provides weak or indirect support, but its evidentiary value is unclear or poorly connected to the claim.
+
+### Score 3
+
+The image provides partial support for the surrounding discussion, though the evidence may be incomplete, generic, or not fully explained.
+
+### Score 4
+
+The image clearly supports relevant analytical claims and helps explain or contextualize the discussion.
+
+### Score 5
+
+The image serves as strong visual evidence that directly substantiates, clarifies, or contextualizes important analytical claims or conclusions.
+
+---
+
+# Output Format
+
+Return the evaluation in strictly valid JSON format.
+
+Do not output Markdown fences, explanations outside the JSON object, or any additional text.
+
+{
+  "scores": {
+    "visual_clarity": 0,
+    "cross_modal_alignment": 0,
+    "information_complementarity": 0,
+    "evidentiary_support": 0
+  },
+  "overall_rationale": ""
+}
