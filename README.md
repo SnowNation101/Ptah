@@ -134,7 +134,7 @@ bash scripts/eval_drb_ptaheval.sh
 ## Citation
 
 ```bibtex
-@article{DBLP:journals/corr/abs-2605-29861,
+@article{zhang2026ptah,
   author       = {Chenghao Zhang and
                   Guanting Dong and
                   Yufan Liu and
